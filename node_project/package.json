@@ -1,0 +1,30 @@
+{
+  "name": "node.js-register-login-app",
+  "version": "1.0.0",
+  "description": "This is a user login and registration app using Node.js, Express, Mongoose and express-sessions. :+1:",
+  "main": "server.js",
+  "dependencies": {
+    "child-process": "^1.0.2",
+    "connect-mongo": "^3.0.0",
+    "cookie-parser": "^1.4.4",
+    "csv-parser": "^2.3.1",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "fs": "0.0.1-security",
+    "mongoose": "^5.6.10",
+    "nodemon": "^1.19.4",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "foram sojitra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FSojitra/Node.js-Register-Login-App/issues"
+  },
+  "homepage": "https://github.com/FSojitra/Node.js-Register-Login-App#readme"
+}

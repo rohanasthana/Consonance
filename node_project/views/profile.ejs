@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Music</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Music template project">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/public/styles/bootstrap-4.1.2/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/public/plugins/OwlCarousel2-2.3.4/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="/public/plugins/OwlCarousel2-2.3.4/owl.theme.default.css">
+	<link rel="stylesheet" type="text/css" href="/public/plugins/OwlCarousel2-2.3.4/animate.css">
+	<link rel="stylesheet" type="text/css" href="/public/styles/main_styles.css">
+	<link rel="stylesheet" type="text/css" href="/public/styles/responsive.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel = "stylesheet" type="text/css" href="/public/styles/new-player.css">
+
+
+</head>
+<body>
+
+<div class="super_container">
+	
+	<!-- Header -->
+
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="header_content d-flex flex-row align-items-center justify-content-center">
+
+						<!-- Logo -->
+						<div class="logo">
+							<a href="#" class="d-flex flex-row align-items-end justify-content-start">
+								<span class="logo_bars d-flex flex-row align-items-end justify-content-between"><span></span><span></span><span></span><span></span><span></span></span>
+								<span class="logo_text">music</span>
+							</a>
+						</div>
+
+						<!-- Main Navigation -->
+						<nav class="main_nav">
+							<ul class="d-flex flex-row align-items-center justify-content-start">
+								<li class="active"><a href="#">Home</a></li>
+								<li><a href="#">Artists</a></li>
+								<li><a href="#">Download Music</a></li>
+								<li><a href="#">News</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</nav>
+
+						<!-- User area -->
+						<div class="log_reg d-flex flex-row align-items-center justify-content-start">
+							<ul class="d-flex flex-row align-items-start justify-content-start">
+								<li>
+									<div class="dropdown">
+										<button style = '' class="dropbtn">User</button>
+										  <div class="dropdown-content">
+										    <p id = 'user_name'></p>
+										    <a id='logout' href='/logout'>logout</a>
+										  </div>
+									</div> 
+								</li>
+							</ul>
+
+							<!-- Hamburger -->
+							<div class="hamburger d-flex flex-column align-items-end justify-content-between"><div></div><div></div><div></div></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Menu -->
+
+	<div class="menu">
+		<div class="menu_container">
+			<div class="menu_background"></div>
+			<div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+			<div class="menu_content d-flex flex-column align-items-center justify-content-start">
+				<nav class="menu_nav">
+					<ul class="d-flex flex-column align-items-center justify-content-start">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Artists</a></li>
+						<li><a href="#">Download Music</a></li>
+						<li><a href="#">News</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+	<!-- Home -->
+
+	<div class="home">
+		
+		<!-- Home Slider -->
+		<div class="home_slider_container">
+			<div class="owl-carousel owl-theme home_slider">
+				
+				<!-- Slide -->
+				<div class="slide" style = 'align-content:center'>
+					<div class="background_image" style="background-image:url(/public/images/index.jpg)"></div>
+					<div class="home_container" style = 'text-align:center'>
+						<!-- main playlist division -->
+						<div style = 'text-align:center'>
+							<h1 style='color:white; '>Recommended Songs for You</h1>
+						</div>
+						<div id = "playlist_area">
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Song -->
+
+	<div class="song">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="public/images/song.png" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="song_content">
+
+						<div id="app-cover">
+							<div id="bg-artwork"></div>
+							<div id="bg-layer"></div>
+							<div id="player">
+								<div id="player-track">
+									<div id="album-name"></div>
+									<div id="track-name"></div>
+									<div id="track-time">
+										<div id="current-time"></div>
+										<div id="track-length"></div>
+									</div>
+									<div id="s-area">
+										<div id="ins-time"></div>
+										<div id="s-hover"></div>
+										<div id="seek-bar"></div>
+									</div>
+								</div>
+								<div id="player-content">
+									<div id="album-art">
+										<img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg" class="active" id="_1">
+										<img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_2.jpg" id="_2">
+										<img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_3.jpg" id="_3">
+										<img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_4.jpg" id="_4">
+										<img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_5.jpg" id="_5">
+										<div id="buffer-box">Buffering ...</div>
+									</div>
+									<div id="player-controls">
+										<div class="control">
+											<div class="button" id="play-previous">
+												<i class="fas fa-backward"></i>
+											</div>
+										</div>
+										<div class="control">
+											<div class="button" id="play-pause-button">
+												<i class="fas fa-play"></i>
+											</div>
+										</div>
+										<div class="control">
+											<div class="button" id="play-next">
+												<i class="fas fa-forward"> </i>
+											</div>
+										</div>
+										<div class="control">
+											<div class="button" id="like-button">
+												<i class="far fa-heart"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="background_image" style="background-image:url(/public/images/footer.jpg)"></div>
+		<div class="footer_content">
+			<div class="container">
+				<div class="row">
+					<div class="col text-center">
+
+						<!-- Logo -->
+						<div class="logo">
+							<a href="#" class="d-flex flex-row align-items-end justify-content-start">
+								<span class="logo_bars d-flex flex-row align-items-end justify-content-between"><span></span><span></span><span></span><span></span><span></span></span>
+								<span class="logo_text">music</span>
+							</a>
+						</div>
+
+						<!-- Footer Social -->
+						<div class="footer_social">
+							<ul class="d-flex flex-row align-items-center justify-content-center">
+								<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer_bar">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="copyright text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+	</footer>
+</div>
+
+<script src="public/js/jquery-3.3.1.min.js"></script>
+<script src="public/styles/bootstrap-4.1.2/popper.js"></script>
+<script src="public/styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+<script src="public/plugins/greensock/TweenMax.min.js"></script>
+<script src="public/plugins/greensock/TimelineMax.min.js"></script>
+<script src="public/plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="public/plugins/greensock/animation.gsap.min.js"></script>
+<script src="public/plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="public/plugins/OwlCarousel2-2.3.4/owl.carousel.js"></script>
+<script src="public/plugins/jPlayer/jquery.jplayer.min.js"></script>
+<script src="public/plugins/jPlayer/jplayer.playlist.min.js"></script>
+<script src="public/plugins/easing/easing.js"></script>
+<script src="public/plugins/progressbar/progressbar.min.js"></script>
+<script src="public/plugins/parallax-js-master/parallax.min.js"></script>
+<script src="public/plugins/scrollTo/jquery.scrollTo.min.js"></script>
+<script src="public/js/custom.js"></script>
+<script src="public/js/new-player.js"></script>
+<script src="public/js/essentials.js"></script>
+
+
+</body>
+</html>
